@@ -2,7 +2,7 @@
 	"workbench.colorTheme": "Abyss",
 	"workbench.iconTheme": "material-icon-theme",
       "editor.fontWeight": "500",
-	"editor.tabSize": 5,
+	"editor.tabSize": 4,
 	"editor.detectIndentation": false,
       "editor.fontFamily": "'Monaco'",
       "editor.fontSize": 14,
