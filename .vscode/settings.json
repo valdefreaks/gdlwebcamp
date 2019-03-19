@@ -1,0 +1,11 @@
+{
+	"workbench.colorTheme": "Abyss",
+	"workbench.iconTheme": "material-icon-theme",
+      "editor.fontWeight": "500",
+	"editor.tabSize": 5,
+	"editor.detectIndentation": false,
+      "editor.fontFamily": "'Lato'",
+      "editor.fontSize": 16,
+      "terminal.integrated.fontWeight": "500",
+	"editor.insertSpaces": false
+      }
