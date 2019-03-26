@@ -5,15 +5,15 @@
 
 	document.addEventListener('DOMContentLoaded', function () {
 
-		var map = L.map('mapa').setView([18.3483,-99.5280], 16);
+		// var map = L.map('mapa').setView([18.3483,-99.5280], 16);
 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+		// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		// 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		// }).addTo(map);
 
-		L.marker([18.3483,-99.5280]).addTo(map)
-			.bindPopup('Lunadepapel.<br> Digitalizando ideas.')
-			.openPopup();
+		// L.marker([18.3483,-99.5280]).addTo(map)
+		// 	.bindPopup('Lunadepapel.<br> Digitalizando ideas.')
+		// 	.openPopup();
 
 		// Campos Datos usuarios
 
@@ -121,32 +121,36 @@
 
 		function mostrarDias() {
 
+			document.getElementById('viernes').style.display = 'none';
+			document.getElementById('sabado').style.display = 'none';
+			document.getElementById('domingo').style.display = 'none';
+
 			var boletosDia = parseInt(pase_dia.value, 10) || 0,
 				boletos2Dias = parseInt(pase_dosdias.value, 10) || 0,
 				boletoCompleto = parseInt(pase_completo.value, 10) || 0;
 
-
 			var diasElegidos = [];
-			document.getElementById('viernes', 'sabado', 'domingo').style.display = 'none<<<<<<<<<<<<<<<<<';
+			
 
 			if (boletosDia > 0) {
 				diasElegidos.push('viernes');
-				console.log(diasElegidos);
+				
 			}
 			if (boletos2Dias > 0) {
 				diasElegidos.push('viernes', 'sabado');
-				console.log(diasElegidos);
+				
 			}
 			if (boletoCompleto > 0) {
 				diasElegidos.push('viernes', 'sabado', 'domingo');
-				console.log(diasElegidos);
+				
 			}
-
+			
 			for (var i = 0; i < diasElegidos.length; i++) {
+				
 				document.getElementById(diasElegidos[i]).style.display = 'block';
-
+				
 			}
-
+			
 		}
 
 	}); //DOM CONTENT LOADED
