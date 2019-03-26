@@ -106,14 +106,12 @@
 					listadoProductos.push(cantEtiquetas + ' etiquetas');
 				}
 
-
 				lista_productos.style.display = "block";
 				lista_productos.innerHTML = '';
 				for (var i = 0; i < listadoProductos.length; i++) {
 					lista_productos.innerHTML += '<i class="fas fa-check"></i>' + listadoProductos[i] + '<br/>';
 
 				}
-
 				suma_total.innerHTML = '';
 				suma_total.innerHTML += "$ " + totalPagar.toFixed(2);
 			}
@@ -130,27 +128,26 @@
 				boletoCompleto = parseInt(pase_completo.value, 10) || 0;
 
 			var diasElegidos = [];
-			
+
 
 			if (boletosDia > 0) {
 				diasElegidos.push('viernes');
-				
+
 			}
 			if (boletos2Dias > 0) {
 				diasElegidos.push('viernes', 'sabado');
-				
+
 			}
 			if (boletoCompleto > 0) {
 				diasElegidos.push('viernes', 'sabado', 'domingo');
-				
+
 			}
-			
+
 			for (var i = 0; i < diasElegidos.length; i++) {
-				
+
 				document.getElementById(diasElegidos[i]).style.display = 'block';
-				
 			}
-			
+
 		}
 
 	}); //DOM CONTENT LOADED
